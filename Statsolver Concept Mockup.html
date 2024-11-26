@@ -1,0 +1,285 @@
+<div class="spss-interface">
+    <div class="top-section">
+        <div class="logo">
+            <span class="logo-text">
+                <span class="logo-stat">STAT</span><span class="logo-solver">Solver</span>
+            </span>
+        </div>
+        <div class="nlp-assistant-panel">
+            <input type="text" 
+                   class="command-input" 
+                   placeholder="Type a command, e.g., 'Clean survey data' or 'Generate a bar chart for Age responses.'"
+            >
+            <button class="send-button">↵</button>
+        </div>
+    </div>
+
+    <div class="menu-bar">
+        <div>File</div>
+        <div>Edit</div>
+        <div>View</div>
+        <div>Data</div>
+        <div>Transform</div>
+        <div>Analyze</div>
+        <div>Graphs</div>
+        <div>Utilities</div>
+        <div>Window</div>
+        <div>Help</div>
+    </div>
+
+    <div class="toolbar">
+        <button>📂 Open</button>
+        <button>💾 Save</button>
+        <button>⬇️ Download</button>
+        <span class="divider"></span>
+        <button>📊 Analyze</button>
+        <button>📈 Graphs</button>
+        <span class="divider"></span>
+        <button>📋 Metadata</button>
+        <button>🧹 Set Cleaning Rules</button>
+        <button>📑 Generate Reports</button>
+        <button>🤖 Co-Pilot Mode</button>
+        <button>⚡ Quick Analysis</button>
+    </div>
+
+    <div class="view-tabs">
+        <div class="view-tab active">Data View</div>
+        <div class="view-tab">Variable View</div>
+    </div>
+
+    <div class="content-area">
+        <div class="variables-panel">
+            <div class="panel-header">Variables</div>
+            <div class="variables-list">
+                <div class="variable-item">Case ID (Numeric)</div>
+                <div class="variable-item">Age (Numeric)</div>
+                <div class="variable-item">Income (Numeric)</div>
+                <div class="variable-item">Gender (Nominal)</div>
+                <div class="variable-item">Satisfaction (Scale)</div>
+                <div class="variable-item">ServiceQuality (Scale)</div>
+                <div class="variable-item">WouldRecommend (Scale)</div>
+            </div>
+        </div>
+
+        <div class="data-view">
+            <table>
+                <tr>
+                    <th>Case ID</th>
+                    <th>Age</th>
+                    <th>Income</th>
+                    <th>Gender</th>
+                    <th>Satisfaction</th>
+                    <th>Service Quality</th>
+                    <th>Would Recommend</th>
+                </tr>
+                <tr><td>1</td><td>28</td><td>45000</td><td>F</td><td>8</td><td>9</td><td>9</td></tr>
+                <tr><td>2</td><td>35</td><td>65000</td><td>M</td><td>6</td><td>7</td><td>7</td></tr>
+                <tr><td>3</td><td>42</td><td>85000</td><td>F</td><td>9</td><td>10</td><td>10</td></tr>
+                <tr><td>4</td><td>31</td><td>55000</td><td>M</td><td>4</td><td>5</td><td>3</td></tr>
+                <tr><td>5</td><td>39</td><td>75000</td><td>F</td><td>7</td><td>8</td><td>8</td></tr>
+                <tr><td>6</td><td>45</td><td>95000</td><td>M</td><td>8</td><td>8</td><td>9</td></tr>
+                <tr><td>7</td><td>29</td><td>48000</td><td>F</td><td>5</td><td>6</td><td>5</td></tr>
+                <tr><td>8</td><td>36</td><td>72000</td><td>M</td><td>7</td><td>7</td><td>8</td></tr>
+                <tr><td>9</td><td>33</td><td>58000</td><td>F</td><td>9</td><td>9</td><td>10</td></tr>
+                <tr><td>10</td><td>41</td><td>82000</td><td>M</td><td>6</td><td>7</td><td>6</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="status-bar">
+        Ready Statsolver Data Editor
+    </div>
+</div>
+
+<style>
+.spss-interface {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #f5f5f5;
+}
+
+.top-section {
+    display: flex;
+    background: #2c3e50;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-stat { color: #3498db; }
+.logo-solver { color: #ff9033; }
+
+/* New NLP Assistant Panel Styles */
+.nlp-assistant-panel {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+    background: #2c3e50;
+    width: 500px;  /* Adjust width as needed */
+}
+
+.command-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #34495e;
+    border-radius: 4px;
+    background: #34495e;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+.command-input::placeholder {
+    color: #95a5a6;
+}
+
+.send-button {
+    padding: 8px 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background: #2980b9;
+}
+
+.menu-bar {
+    display: flex;
+    gap: 20px;
+    padding: 5px 10px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.menu-bar div {
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.menu-bar div:hover {
+    background: #e9ecef;
+    border-radius: 4px;
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background: #fff;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.toolbar button {
+    padding: 5px 10px;
+    border: 1px solid #dee2e6;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.toolbar button:hover {
+    background: #f8f9fa;
+}
+
+.divider {
+    width: 1px;
+    background: #dee2e6;
+    margin: 0 10px;
+}
+
+.view-tabs {
+    display: flex;
+    gap: 2px;
+    padding: 0 10px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.view-tab {
+    padding: 8px 16px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.view-tab.active {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-bottom: none;
+    margin-bottom: -1px;
+}
+
+.content-area {
+    display: flex;
+    flex: 1;
+    margin: 10px;
+    background: white;
+    border: 1px solid #dee2e6;
+}
+
+.variables-panel {
+    width: 200px;
+    border-right: 1px solid #dee2e6;
+}
+
+.panel-header {
+    padding: 10px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    font-weight: bold;
+}
+
+.variables-list {
+    padding: 10px;
+}
+
+.variable-item {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.variable-item:hover {
+    background: #f8f9fa;
+}
+
+.data-view {
+    flex: 1;
+    overflow: auto;
+    padding: 10px;
+}
+
+.data-view table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-view th, .data-view td {
+    border: 1px solid #dee2e6;
+    padding: 8px;
+    text-align: left;
+}
+
+.data-view th {
+    background: #f8f9fa;
+}
+
+.status-bar {
+    padding: 5px 10px;
+    background: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+</style>
